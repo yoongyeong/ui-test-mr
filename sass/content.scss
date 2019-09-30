@@ -1,0 +1,20 @@
+.sidebar{
+  background-color: $color-secondary;
+  grid-column: sidebar-start/sidebar-end;
+}
+
+.header{
+  background-color: $color-grey-light;
+}
+
+.form{
+  background-color: $color-grey-medium;
+}
+
+.widget{
+  background-color: $color-grey-dark;
+}
+
+.actions{
+  background-color: $color-green-01;
+}

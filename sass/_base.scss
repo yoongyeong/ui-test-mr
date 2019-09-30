@@ -1,0 +1,68 @@
+// COLOR VARIABLES
+$color-primary: crimson;
+$color-secondary: maroon;
+
+$color-green-01: green;
+$color-orange-01: orangered;
+$color-blue-01: royalblue;
+$color-blue-02: blue;
+
+$color-black: #333;
+$color-grey-dark: gray;
+$color-grey-medium: darkgray;
+$color-grey-light: lightgray;
+
+// FONT VARIABLES
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
+
+// RESPONSIVE BREAK POINTS
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-md: 50em; //800px
+$bp-sm: 37.5em; //600px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding:0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @media only screen and (max-width:$bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+
+  // Row Tracks
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+
+  // Column Tracks
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end content-start] 
+  minmax(40rem, 1fr) [content-end widget-start] minmax([widget-end];
+
+  @media only screen and (max-width: $bp-large){
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 
+    [center-end] minmax(6rem, 1fr) [full-end];   
+  }
+
+  @media only screen and (max-width: $bp-md){
+    grid-template-rows: 6rem calc(100vh - 6rem);
+  }
+}
