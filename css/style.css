@@ -21,7 +21,7 @@ body {
   padding: 0 .8rem 0 0;
   grid-template-rows: 6.4rem repeat(2, min-content);
   grid-template-columns: [sidebar-start] 6rem [sidebar-end content-start full-start] repeat(8, minmax(min-content, 1fr)) [content-end widget-start] 28rem [widget-end full-end];
-  grid-gap: .8rem; }
+  column-gap: 1.6rem; }
   @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
