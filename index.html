@@ -6,28 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Medico &mdash; </title>
+  <title>Medico &mdash; Patient's Name</title>
 </head>
 
 <body class="container">
   <div class="sidebar">
     <button class="nav-btn"></button>
   </div>
-  <header class="header">Header</header>
+  <header class="header shadow">Header</header>
   <div class="content">
-    <div class="content__cppt"></div>
-    <div class="content__assessment--nurse"></div>
-    <div class="content__assessment--doctor">Assessment Awal</div>
+    <button class="content__cppt accordion sdw-sf rds-5">CPPT <span class="notif--inline">(2 need
+        verification)</span></button>
+    <button class="content__assessment--perawat accordion sdw-sf rds-5">Assessment Awal - <span
+        class="heading-2 heading-2--blue">Perawat</span></button>
+    <button class="content__assessment--dokter accordion sdw-sf rds-5">Assessment Awal - <span
+        class="heading-2 heading-2--blue">Dokter</span></button>
   </div>
   <div class="widget">
-    <div class="widget__MR">Medical Records</div>
-    <div class="widget__importancies">
-      <button class="widget__importancies__tab--general">General</button>
-      <button class="widget__importancies--tab--medication">Medication</button>
-      <button class="widget__importancies--tab--devices">Devices</button>
+    <div class="widget__mr sdw-sf rds-5">
+      <img src="https://via.placeholder.com/80" alt="Patient Picture" class="widget__mr__img">
+    </div>
+    <div class="widget__importancies sdw-sf rds-5">
+      <button class="widget__importancies--general tab">General</button>
+      <button class="widget__importancies--medication tab">Medication</button>
+      <button class="widget__importancies--devices tab">Devices</button>
     </div>
   </div>
   <div class="actions">
@@ -37,5 +42,6 @@
     <button class="actions__discharge">Discharge</button>
   </div>
 </body>
+<script src="js/index.js"></script>
 
 </html>

@@ -5,15 +5,19 @@ $color-secondary: #7F1215;
 // MONOCHROMES
 $color-black: #333333;
 $color-black-true: black;;
-$color-grey-dark: #9B9B9B;
-$color-grey-medium: #DDDDDD;
+$color-grey-darker: #9B9B9B;
+$color-grey-dark: #DDDDDD;
+$color-grey-medium: #ECEEEF;
 $color-grey-light: #F5F5F5;
+$color-grey-lighter: #F9FAFC;
+
 $color-white: #F9FAFC;
 $color-white-true: white;
 
 // SECONDARY COLORS
 $color-blue: #4285F4;
-$color-blue-deep: #00299A;
+$color-blue-light: #3FC2F8;
+$color-blue-dark: #00299A;
 $color-red: #FF0000;
 $color-orange: #FF8D1A;
 $color-green: #109B00;
@@ -40,10 +44,6 @@ $bp-sm: 37.5em; //600px;
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-
-  @media only screen and (max-width:$bp-largest) {
-    font-size: 50%;
-  }
 }
 
 body {
@@ -55,13 +55,16 @@ body {
 
 .container {
   display: grid;
+  background-color: $color-grey-medium;
+  padding: 0 .8rem 0 0;
 
   // Row Tracks
   grid-template-rows: 6.4rem repeat(2, min-content);
 
   // Column Tracks
   grid-template-columns: [sidebar-start] 6rem [sidebar-end content-start full-start] 
-  repeat(8, minmax(min-content, 14rem)) [content-end widget-start] 28rem [widget-end full-end];
+  repeat(8, minmax(min-content, 1fr)) [content-end widget-start] 28rem [widget-end full-end];
+  grid-gap: .8rem;
 
   @media only screen and (max-width: $bp-large){
     grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
