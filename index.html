@@ -1,65 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <title>Medico &mdash; {Actor's Name}</title>
-  </head>
-  <body class="container">
-    <div class="sidebar">
-      <button class="nav-btn">
-        <img src="https://via.placeholder.com/40" alt="" class="nav-icon">
-      </button>
-    </div>
-    <header class="header">
-      <img src="https://via.placeholder.com/40" alt="Medico Logo" class="header__logo">
-      <div class="profile">
-        <img src="https://via.placeholder.com/40?text=Rounded+Image" alt="Profile Picture" class="profile__img">
-        <h4 class="heading-3">dr. John Doe, KPTI</h4>
-        <p class="profile__desc">Spesialis Penyakit Tropis</p>
-      </div>
-    </header>
-    <div class="form">
-      <div class="form__CPPT">CPPT</div>
-      <div class="form__assessment-perawat">Assesment Awal <span class="">(Nurse)</span></div>
-      <div class="form__assessment-dokter">Assessment Awal <span class="">(Dokter)</span></div>
-      <div class="form__additionals">
-        <header class="header-2">Additional Forms</header>
-        <p>Tambah form pengkajian lainnya...</p>
-        <button class="btn form__additionals--add-form"></button>
-      </div>
-    </div>
-    <div class="widget">
-      <div class="widget__MR">Medical Record</div>
-      <div class="widget__importancies">
-        <button class="widget--importancies__tabs" onclick="">
-          Importancies
-        </button>
-        <button class="widget--importancies__tabs" onclick="">Contagious</button>
-        <button class="widget--importancies__tabs" onclick="">Devices</button>
-      </div>
-    </div>
 
-    <div class="actions">
-      <button class="btn actions__rujuk btn-secondary-01-gray">
-        Rujuk
-      </button>
-      <button class="btn actions__rawat btn-secondary-01-gray">
-        SPRI
-      </button>
-      <button class="btn actions__WIP btn-primary-01-orange">
-        WIP
-      </button>
-      <button class="btn actions__discharge btn-primary-01-green">
-        Discharge
-      </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Medico &mdash; </title>
+</head>
+
+<body class="container">
+  <div class="sidebar">
+    <button class="nav-btn"></button>
+  </div>
+  <header class="header">Header</header>
+  <div class="content">
+    <div class="content__cppt"></div>
+    <div class="content__assessment--nurse"></div>
+    <div class="content__assessment--doctor">Assessment Awal</div>
+  </div>
+  <div class="widget">
+    <div class="widget__MR">Medical Records</div>
+    <div class="widget__importancies">
+      <button class="widget__importancies__tab--general">General</button>
+      <button class="widget__importancies--tab--medication">Medication</button>
+      <button class="widget__importancies--tab--devices">Devices</button>
     </div>
-  </body>
+  </div>
+  <div class="actions">
+    <button class="actions__rujuk">Rujuk ke...</button>
+    <button class="actions__konsul">Konsul ke...</button>
+    <button class="actions__wip">WIP</button>
+    <button class="actions__discharge">Discharge</button>
+  </div>
+</body>
+
 </html>
