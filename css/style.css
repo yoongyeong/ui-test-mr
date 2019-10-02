@@ -44,26 +44,32 @@ body {
     color: #3FC2F8; }
 
 .btn-1 {
-  margin: auto;
+  padding: 0 1rem;
   vertical-align: middle;
   height: 4rem;
   font-family: "Open Sans", sans-serif;
   color: #4285F4;
   font-weight: 700;
   font-size: 1.4rem;
+  background: none;
   box-shadow: none;
   border-color: #4285F4;
   border: 1px solid #4285F4;
   border-radius: 0.5rem;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   .btn-1__icon {
+    font-size: 2.4rem;
     width: 2.4rem;
     height: 2.4rem;
     vertical-align: middle;
-    fill: red;
-    width: 2rem;
-    height: 2rem;
+    fill: #4285F4;
     padding: .4rem; }
+    .btn-1__icon:hover {
+      fill: white; }
+  .btn-1:hover {
+    color: white;
+    background-color: #4285F4; }
 
 .sidebar {
   background-color: #B71C1C;
@@ -176,8 +182,6 @@ body {
         gap: .8rem; }
         .widget .mr__data .bio__title::after {
           content: ":"; }
-    .widget .mr .patient-folder {
-      align-content: center; }
   .widget__importancies {
     background-color: white;
     display: block;

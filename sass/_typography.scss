@@ -27,27 +27,36 @@
 
 .btn-1 {
   
-  margin: auto;
+  padding: 0 1rem;
   vertical-align: middle;
   height: 4rem;
   font-family: $font-primary;
   color: $color-blue;
   font-weight: 700;
   font-size: 1.4rem;
-  // background: none;
+  background: none;
   box-shadow: none;
   border-color: $color-blue;
   border: 1px solid $color-blue;
   border-radius: 0.5rem;
   text-decoration: none;
+  cursor: pointer;
 
   &__icon{
+    font-size: 2.4rem;
     width: 2.4rem;
     height: 2.4rem;
     vertical-align: middle;
-    fill: red;
-    width: 2rem;
-    height: 2rem;
+    fill: $color-blue;
     padding: .4rem;
+
+    &:hover{
+      fill: white;
+    }
+  }
+
+  &:hover{
+    color: white;
+    background-color: $color-blue;
   }
 }

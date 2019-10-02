@@ -10,7 +10,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/solid.min.css" />
+    <!-- <link rel="stylesheet" href="static/styles/fontawesome/css/all.css" /> -->
+    <link rel="stylesheet" href="static/styles/all.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <script defer src="font-awesome/js/fontawesome.js"></script>
 
     <title>Medico &mdash; Patient's Name</title>
   </head>
@@ -84,18 +88,21 @@
             </div>
           </div>
 
-          <a href="#" class="patient-folder btn-1">
+          <!-- <a href="#" class="patient-folder btn-1">
             <svg class="btn-1__icon">
               <use xlink:href="img/solid.svg#folder"></use>
             </svg>
             Patient Folder
-          </a>
-          <!-- <button class="patient-folder btn-1">
-            <svg class="patient-folder__icon">
+          </a> -->
+          <button class="patient-folder btn-1">
+            <!-- <svg class="btn-1__icon">
               <use xlink:href="img/solid.svg#folder"></use>
-            </svg>
+            </svg> -->
+            <i class="btn-1__icon far folder-o">
+              
+            </i>
             Patient Folder
-          </button> -->
+          </button>
         </div>
 
         <div class="importancies sdw-sf rds-5">
@@ -113,5 +120,5 @@
       <button class="actions__discharge">Discharge</button>
     </div>
   </body>
-  <script src="js/index.js"></script>
+  <script src="js/index.js"> </script>
 </html>
