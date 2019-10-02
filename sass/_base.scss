@@ -4,15 +4,11 @@ $color-secondary: #7F1215;
 
 // MONOCHROMES
 $color-black: #333333;
-$color-black-true: black;;
 $color-grey-darker: #9B9B9B;
 $color-grey-dark: #DDDDDD;
 $color-grey-medium: #ECEEEF;
 $color-grey-light: #F5F5F5;
 $color-grey-lighter: #F9FAFC;
-
-$color-white: #F9FAFC;
-$color-white-true: white;
 
 // SECONDARY COLORS
 $color-blue: #4285F4;
@@ -26,6 +22,13 @@ $color-green-light: #15CC00;
 // FONTS
 $font-primary: 'Open Sans', sans-serif;
 $font-secondary: 'Roboto', sans-serif;
+
+// @mixin transform($transforms) {
+// 	-webkit-translate: $transforms;
+// 	-moz-translate: $transforms;
+// 	-ms-translate: $transforms;
+// 	translate: $transforms;
+// }
 
 // RESPONSIVE BREAKPOINTS 
 $bp-largest: 75em; //1200px
@@ -47,32 +50,31 @@ html {
 }
 
 body {
-  font-family: $font-primary;
-  color: $color-grey-dark;
-  font-weight: 300;
-  line-height: 1.6;
+  font-family: $font-secondary;
+  color: $color-black;
+  font-weight: 100;
+  font-size: 14px;
+  word-wrap: break-word;
 }
 
 .container {
   display: grid;
   background-color: $color-grey-darker;
-  padding: 0 .8rem 0 0;
 
   // Row Tracks
   grid-template-rows: 6.4rem repeat(2, min-content);
 
   // Column Tracks
-  grid-template-columns: [sidebar-start] 6rem [sidebar-end content-start full-start] 
-  repeat(8, minmax(min-content, 1fr)) [content-end widget-start] 28rem [widget-end full-end];
-  grid-gap: .8rem;
+  grid-template-columns: [sidebar-start] 6rem [sidebar-end content-start] 
+  minmax(min-content, 1fr) [full-end];
 
-  @media only screen and (max-width: $bp-large){
-    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
-    grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 
-    [center-end] minmax(6rem, 1fr) [full-end];   
-  }
+  // @media only screen and (max-width: $bp-large){
+  //   grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+  //   grid-template-columns:  [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) 
+  //   [center-end] minmax(6rem, 1fr) [full-end];   
+  // }
 
-  @media only screen and (max-width: $bp-md){
-    grid-template-rows: 6rem calc(100vh - 6rem);
-  }
+  // @media only screen and (max-width: $bp-md){
+  //   grid-template-rows: 6rem calc(100vh - 6rem);
+  // }
 }

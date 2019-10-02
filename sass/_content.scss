@@ -49,23 +49,26 @@
 }
 
 .header {
-  grid-column: content-start/-1;
+  background-color: white;
 }
 
 .content {
-  grid-column: content-start/content-end;
-  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: [form-start] minmax(67.4rem, 1fr) [form-end widget-start] 27.2rem [widget-end];
+  gap: 0.8rem;
+  padding: 0.8rem;
+}
 
-  & .accordion {
+.form {
+  grid-column: form-start/form-end;
+
+  .accordion {
     display: block;
     background-color: $color-grey-light;
     color: $color-grey-darker;
-    font-style: $font-primary;
-    font-weight: 700;
-    font-size: 1.8rem;
     cursor: pointer;
     margin-bottom: 8px;
-    padding: 8px;
+    padding: .8rem;
     width: 100%;
     border: none;
     text-align: left;
@@ -87,34 +90,90 @@
 }
 
 .widget {
-  grid-column: widget-start/widget-end;
-  grid-row: 2/3;
+  display: block;
 
-  &__mr {
-    background-color: $color-white-true;
-    display:block;
+  .mr {
+    background-color: white;
+    display: inline-block;
+    flex-wrap: wrap;
     min-height: 25rem;
     max-height: 36rem;
+    max-width: 27.2rem;
     transform: translateY(16px);
     margin-bottom: 16px;
+    padding: 0.8rem;
 
-    &__img {
-      background-color: $color-grey-dark;
-      transform: translate(8px, -16px);
+    &__upper{
+      display: flex;
+      margin-bottom: .4rem;
+
+      .patient-img {
+        background-color: $color-grey-dark;
+        transform: translateY(-24px);
+  
+        // @mixin transform($property) {
+        //   -webkit-transform: $property;
+        //   -ms-transform: $property;
+        //   transform: $property;
+        // }
+        // @include transform(transform(translate(8px, -16px)));
+      }
       
-      // @mixin transform($property) {
-      //   -webkit-transform: $property;
-      //   -ms-transform: $property;
-      //   transform: $property;
-      // }
-      // @include transform(transform(translate(8px, -16px)));
+      .icon{
+        // max-width: 12rem;
+        display: grid;
+        grid-template-rows: repeat(2, 2.4rem);
+        grid-template-columns: repeat(5, 2.4rem);
+        column-gap: 1.2rem;
+        row-gap: .8rem;
+        // padding: 0 1.2rem;
+        margin-left: .8rem;
+
+        &__svg{
+          background-color: $color-grey-dark;
+          border-radius: .3rem;
+
+        }
+      }
     }
 
+
+
+    &__data {
+      transform: translateY(-16px);
+
+      .mr-num {
+        font-style: $font-secondary;
+        font-size: 1.4rem;
+        color: $color-black;
+      }
+
+      .mr-name {
+        line-height: 2rem;
+        margin-bottom: .8rem;
+      }
+
+      .bio {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(12rem, 1fr));
+        gap:.8rem;
+
+        &__title{
+          &::after{
+            content: ":";
+          }
+        }
+      }
+    }
+
+    .patient-folder{
+      align-content: center;
+    }
   }
-  
-  &__importancies{
-    background-color: $color-white-true;
-    display:block;
+
+  &__importancies {
+    background-color: white;
+    display: block;
     min-height: 25rem;
     max-height: 36rem;
     transform: translateY(16px);
@@ -123,7 +182,6 @@
 
 .actions {
   background-color: $color-grey-dark;
-  grid-column: full-start/full-end;
 }
 
 .sdw-sf {
