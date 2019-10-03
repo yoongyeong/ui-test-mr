@@ -19,17 +19,18 @@
 .link {
   font-weight: 700;
   color: $color-blue;
+  text-decoration-line: none;
 
   &:hover {
     color: $color-blue-light;
   }
+  &:active{
+    text-decoration: underline;
+  }
 }
 
 .btn-1 {
-  
   padding: 0 1rem;
-  vertical-align: middle;
-  height: 4rem;
   font-family: $font-primary;
   color: $color-blue;
   font-weight: 700;
@@ -43,9 +44,10 @@
   cursor: pointer;
 
   &__icon{
-    font-size: 2.4rem;
-    width: 2.4rem;
-    height: 2.4rem;
+    // font-size: 3rem;
+    // width: 2.4rem;
+    // height: 2.4rem;
+    margin: 0px;
     vertical-align: middle;
     fill: $color-blue;
     padding: .4rem;
@@ -58,5 +60,9 @@
   &:hover{
     color: white;
     background-color: $color-blue;
+  }
+
+  &:active{
+    background-color: $color-blue-light;
   }
 }

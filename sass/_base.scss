@@ -59,7 +59,7 @@ body {
 
 .container {
   display: grid;
-  background-color: $color-grey-darker;
+  background-color: $color-grey-dark;
 
   // Row Tracks
   grid-template-rows: 6.4rem repeat(2, min-content);
