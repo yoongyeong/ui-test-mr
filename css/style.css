@@ -149,15 +149,15 @@ body {
     min-height: 25rem;
     max-height: 36rem;
     max-width: 27.2rem;
-    transform: translateY(16px);
-    margin-bottom: 16px;
-    padding: 0.8rem; }
+    transform: translateY(1.6rem);
+    padding: 0.8rem;
+    margin-bottom: 2.6rem; }
     .widget .mr__top {
       display: flex;
       margin-bottom: 0.4rem; }
       .widget .mr__top .patient-img {
         background-color: #DDDDDD;
-        transform: translateY(-24px); }
+        transform: translateY(-2.4rem); }
       .widget .mr__top .icon {
         display: grid;
         grid-template-rows: repeat(2, 2.4rem);
@@ -169,7 +169,7 @@ body {
           background-color: #DDDDDD;
           border-radius: 0.3rem; }
     .widget .mr__data {
-      transform: translateY(-16px); }
+      transform: translateY(-1.6rem); }
       .widget .mr__data .mr-num {
         font-style: "Roboto", sans-serif;
         font-size: 1.4rem;
@@ -185,24 +185,79 @@ body {
           content: ":"; }
       .widget .mr__data::after {
         background-color: #DDDDDD;
-        height: 2px;
+        height: 0.2rem;
         margin: 0.8rem 0 0 0;
         content: "";
         display: block; }
     .widget .mr__bot {
       display: flex;
-      justify-content: center; }
-  .widget__importancies {
+      justify-content: center;
+      margin-top: -0.8rem; }
+  .widget .warning {
     background-color: white;
     display: block;
     min-height: 25rem;
-    max-height: 36rem; }
+    max-height: 36rem;
+    overflow: hidden; }
+    .widget .warning__btn {
+      background-color: inherit;
+      display: flex;
+      border-color: none; }
+      .widget .warning__btn .tablink {
+        margin: 0px;
+        width: 100%;
+        background-color: white;
+        color: #333333;
+        border-color: none;
+        cursor: pointer;
+        padding: 1rem 2rem;
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1;
+        justify-content: center;
+        border: none; }
+        .widget .warning__btn .tablink:hover {
+          background-color: #ECEEEF; }
+        .widget .warning__btn .tablink.active {
+          display: block;
+          padding: 0px 2rem;
+          z-index: 1;
+          box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.16);
+          color: #B71C1C;
+          background-color: #B71C1C;
+          max-height: 0.5rem;
+          content: ""; }
+          .widget .warning__btn .tablink.active i {
+            transform: translateY(1rem); }
+        .widget .warning__btn .tablink:first-child {
+          border-radius: 0.5rem 0px 0px 0px; }
+        .widget .warning__btn .tablink:last-child {
+          border-radius: 0px 0.5rem 0px 0px; }
+    .widget .warning .general {
+      z-index: 3;
+      display: block;
+      box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.16);
+      height: 100%; }
+      .widget .warning .general .allergy {
+        display: block; }
+        .widget .warning .general .allergy__data {
+          display: grid;
+          padding: 0 .8rem;
+          grid-template-columns: 6.4rem 1fr 4.8rem; }
+          .widget .warning .general .allergy__data .type {
+            font-size: 1.2rem; }
+          .widget .warning .general .allergy__data .name {
+            font-size: 1.4rem;
+            font-weight: 500; }
+          .widget .warning .general .allergy__data .severity {
+            font-size: 1.2rem;
+            text-align: right; }
 
 .actions {
   background-color: #DDDDDD; }
 
 .sdw-sf {
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); }
+  box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.16); }
 
 .rds-5 {
   border-radius: 0.5rem; }

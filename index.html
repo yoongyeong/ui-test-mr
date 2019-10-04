@@ -99,36 +99,63 @@
         </div>
 
         <div class="warning sdw-sf rds-5">
-          <div class="warning__btn">
+          <div class="warning__btn tab">
             <button
-              class="warning__general tablink"
+              class="warning__btn tablink"
               onclick="openWarning(event,'General')"
+              id="defaultOpen"
             >
-              <i class="btn-1__icon fa fa-warning fa-2x"></i>
+              <i class="icon fa fa-warning fa-2x" alt="General"></i>
             </button>
 
             <button
-              class="warning__medication tablink"
+              class="warning__btn tablink"
               onclick="openWarning(event,'Medication')"
+              id="defaultOpen"
             >
-              <i class="btn-1__icon fa fa-warning fa-2x"></i>
+              <i class="icon fa fa-warning fa-2x"></i>
             </button>
+
             <button
-              class="warning__devices tablink"
+              class="warning__btn tablink"
               onclick="openWarning(event,'Devices')"
+              id="defaultOpen"
             >
-              <i class="btn-1__icon fa fa-warning fa-2x"></i>
+              <i class="icon fa fa-warning fa-2x"></i>
             </button>
           </div>
           <div class="warning__content">
-            <div id="General" class="warning  w3-border city">
-              <p>London is the capital city of England.</p>
+            <div id="General" class="general tabcontent">
+              <div class="allergy">
+                <div class="allergy__data">
+                  <p class="type">(Obat)</p>
+                  <h6 class="name heading-5">Lorem ipsum</h6>
+                  <p class="severity">Severe</p>
+                </div>
+                <div class="allergy__data">
+                  <p class="type">(Makanan)</p>
+                  <h6 class="name heading-5">Sit dolor</h6>
+                  <p class="severity">Low</p>
+                </div>
+                <div class="allergy__data">
+                  <p class="type">(Lain-lain)</p>
+                  <h6 class="name heading-5">Consectetur adip...</h6>
+                  <p class="severity">Medium</p>
+                </div>
+              </div>
+                
+                
             </div>
-            <div id="Medication" class="warning  w3-border city">
-              <p>London is the capital city of England.</p>
+
+            <div
+              id="Medication"
+              class="warning__content--medication tabcontent"
+            >
+              <p>Medication Tab Content</p>
             </div>
-            <div id="Devices" class="warning  w3-border city">
-              <p>London is the capital city of England.</p>
+
+            <div id="Devices" class="warning__content--devices tabcontent">
+              <p>Devices Content</p>
             </div>
           </div>
         </div>
