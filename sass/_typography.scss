@@ -60,9 +60,17 @@
   &:hover{
     color: white;
     background-color: $color-blue;
+    transition: all .1s ease-out;
   }
 
   &:active{
     background-color: $color-blue-light;
+    transition: none;
   }
+}
+
+.p-sm{
+  font-size: 1.3rem;
+  font-style: $font-secondary;
+  font-weight: 300;
 }

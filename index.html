@@ -16,6 +16,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- <script src="https://cdn3.devexpress.com/jslib/19.1.6/js/dx.all.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script defer src="font-awesome/js/fontawesome.js"></script>
 
@@ -29,28 +31,57 @@
 
     <header class="header sdw-sf">Header</header>
 
-    <div class="content">
+    <div class="workspace">
       <div class="form">
-        <button class="form__cppt accordion heading-2 sdw-sf rds-5">
+        <button id="cppt" class="form__cppt accordion-header heading-2 sdw-sf rad-5">
           CPPT <span class="notif--inline">(2 need verification)</span>
+          <i class="icon fa fa-chevron-down"></i>
         </button>
-        <button class="form__perawat accordion heading-2 sdw-sf rds-5">
+        <div id="cppt-container" class="accordion-container form__cppt__container sdw-sf rad-bot-5">
+          <div class="cppt-content">
+            <img src="https://via.placeholder.com/48" alt="" class="img">
+            <h5 class="ppa-nama heading-5">David Broome</h5>
+            <p class="ppa-gelar p-sm">Licensed Clinical Social Worker</p>
+            <p class="time p-sm">Thu, 12 Sep '19, 12:05</p>
+          </div>
+        </div>
+
+        <button class="form__perawat accordion-header heading-2 sdw-sf rad-5">
           Assessment Awal -
           <span class="heading-2 heading-2--blue">Perawat</span>
+          <i class="icon fa fa-chevron-down"></i>
         </button>
-        <button class="form__dokter accordion heading-2 sdw-sf rds-5">
+        <div class="accordion-container form__cppt__content sdw-sf rad-bot-5">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nosti,
+            credo, illud: Nemo pius est, qui pietatem-; Verum hoc idem saepe
+            faciamus. Non minor, inquit, voluptas percipitur ex vilissimis rebus
+            quam ex pretiosissimis.
+          </p>
+        </div>
+
+        <button class="form__dokter accordion-header heading-2 sdw-sf rad-5">
           Assessment Awal -
           <span class="heading-2 heading-2--blue">Dokter</span>
+          <i class="icon fa fa-chevron-down"></i>
         </button>
+        <div class="accordion-container form__cppt__content sdw-sf rad-bot-5">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nosti,
+            credo, illud: Nemo pius est, qui pietatem-; Verum hoc idem saepe
+            faciamus. Non minor, inquit, voluptas percipitur ex vilissimis rebus
+            quam ex pretiosissimis. dadwadsadsadwa fwadwsaewaedw adwsadewadewea dwawaew2qdesfda rrfewrefewrf3wa waewa3dswafrwaedwa waedwarewae.
+          </p>
+        </div>
       </div>
 
       <div class="widget">
-        <div class="mr sdw-sf rds-5">
+        <div class="mr sdw-sf rad-5">
           <div class="mr__top">
             <img
               src="https://via.placeholder.com/80"
               alt="Patient Picture"
-              class="patient-img rds-5"
+              class="patient-img rad-5"
             />
             <div class="icon">
               <use xlink:href="" class="icon__svg">1</use>
@@ -98,7 +129,7 @@
           </div>
         </div>
 
-        <div class="warning sdw-sf rds-5">
+        <div class="warning sdw-sf rad-5">
           <div class="warning__btn tab">
             <button
               class="warning__btn tablink"
@@ -143,8 +174,6 @@
                   <p class="severity">Medium</p>
                 </div>
               </div>
-                
-                
             </div>
 
             <div
@@ -168,6 +197,7 @@
       <button class="actions__wip">WIP</button>
       <button class="actions__discharge">Discharge</button>
     </div>
+
+    <script src="js/index.js"></script>
   </body>
-  <script src="js/index.js"></script>
 </html>
