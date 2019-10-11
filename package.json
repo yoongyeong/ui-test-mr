@@ -26,7 +26,7 @@
   },
   "typeAcquisition": {
     "include": [
-      "jquery"
+      "jquery-3.4.1"
     ]
   }
 }

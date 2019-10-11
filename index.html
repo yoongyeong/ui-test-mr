@@ -10,16 +10,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <link rel="stylesheet" href="static/styles/fontawesome/css/all.css" /> -->
-    <!-- <link rel="stylesheet" href="static/styles/all.css" /> -->
+    <link rel="stylesheet" href="css/medifont.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
     <!-- <script src="https://cdn3.devexpress.com/jslib/19.1.6/js/dx.all.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
 
-    <script defer src="font-awesome/js/fontawesome.js"></script>
+    <!-- <script defer src="font-awesome/js/fontawesome.js"></script> -->
 
     <title>Medico &mdash; Patient's Name</title>
   </head>
@@ -29,29 +29,94 @@
       <button class="nav-btn"></button>
     </div>
 
-    <header class="header sdw-sf">Header</header>
+    <header class="header sh-sf">
+      <div class="header--static">
+        <a href="#" class="header-logo">
+          <img src="img/medico-logo-red-64.png" alt="Medico Logo" />
+        </a>
+        <div class="header-nav">
+          <a href="#" class="header-btn btn-message rad-5">
+            <svg class="icon-svg">
+              <use xlink:href="svg/solid.svg#envelope"></use>
+            </svg>
+          </a>
+          <a href="#" class="header-btn btn-notif rad-5">
+            <svg class="icon-svg">
+              <use xlink:href="svg/solid.svg#bell"></use>
+            </svg>
+          </a>
+          <img
+            src="img/default-photo-doctor.png"
+            alt="Doctor's Name"
+            class="btn btn-profile sh-sf"
+          />
+        </div>
+      </div>
+      <div class="header--dynamic"></div>
+    </header>
 
     <div class="workspace">
       <div class="form">
-        <button id="cppt" class="form__cppt accordion-header heading-2 sdw-sf rad-5">
+        <button
+          id="cppt"
+          class="form__cppt accordion-header heading-2 sh-sf rad-top-5 rad-bot-5 pad-bot-8"
+        >
           CPPT <span class="notif--inline">(2 need verification)</span>
           <i class="icon fa fa-chevron-down"></i>
         </button>
-        <div id="cppt-container" class="accordion-container form__cppt__container sdw-sf rad-bot-5">
-          <div class="cppt-content">
-            <img src="https://via.placeholder.com/48" alt="" class="img">
-            <h5 class="ppa-nama heading-5">David Broome</h5>
-            <p class="ppa-gelar p-sm">Licensed Clinical Social Worker</p>
-            <p class="time p-sm">Thu, 12 Sep '19, 12:05</p>
+        <div
+          id="cppt-container"
+          class="accordion-container form__cppt__container sh-sf rad-bot-5"
+        >
+          <div class="cppt-card">
+            <img
+              src="img\alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg"
+              alt=""
+              class="img sh-sf"
+            />
+            <div class="cppt-card__content">
+              <div class="cppt-card__content-header">
+                <div>
+                  <h5 class="ppa-nama heading-5">Steinarr Flomran</h5>
+                  <p class="ppa-gelar p-sm">Licensed Clinical Social Worker</p>
+                </div>
+                <p class="time p-sm">Thu, 12 Sep '19, 12:05</p>
+              </div>
+              <div class="soap sh-sf">
+                <span class="soap-s heading-5 align-r">S : </span>
+                <p class="soap-s__content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                <span class="soap-o heading-5 align-r">O : </span>
+                <p class="soap-o__content">
+                  Faceres tu quidem, Torquate, haec omnia.
+                </p>
+                <span class="soap-a heading-5 align-r">A : </span>
+                <p class="soap-a__content">
+                  Tu autem, si tibi illa probabantur, cur non propriis verbis ea
+                  tenebas? Ita multa dicunt, quae vix intellegam. At ego quem
+                  huic anteponam non audeo dicere; Ita graviter et severe
+                  voluptatem secrevit a bono.
+                </p>
+                <span class="soap-p heading-5 align-r">P : </span>
+                <p class="soap-p__content">
+                  Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per
+                  se ipsa rerum scientia.
+                </p>
+              </div>
+              <p class="soap-end p-sm">End of CPPT</p>
+            </div>
           </div>
         </div>
 
-        <button class="form__perawat accordion-header heading-2 sdw-sf rad-5">
+        <button
+          class="form__perawat accordion-header heading-2 sh-sf rad-top-5 rad-bot-5 pad-bot-8"
+        >
           Assessment Awal -
           <span class="heading-2 heading-2--blue">Perawat</span>
           <i class="icon fa fa-chevron-down"></i>
         </button>
-        <div class="accordion-container form__cppt__content sdw-sf rad-bot-5">
+        <div class="accordion-container form__cppt__content sh-sf rad-bot-5">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nosti,
             credo, illud: Nemo pius est, qui pietatem-; Verum hoc idem saepe
@@ -60,23 +125,26 @@
           </p>
         </div>
 
-        <button class="form__dokter accordion-header heading-2 sdw-sf rad-5">
+        <button
+          class="form__dokter accordion-header heading-2 sh-sf rad-top-5 rad-bot-5 pad-bot-8"
+        >
           Assessment Awal -
           <span class="heading-2 heading-2--blue">Dokter</span>
           <i class="icon fa fa-chevron-down"></i>
         </button>
-        <div class="accordion-container form__cppt__content sdw-sf rad-bot-5">
+        <div class="accordion-container form__cppt__content sh-sf rad-bot-5">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nosti,
             credo, illud: Nemo pius est, qui pietatem-; Verum hoc idem saepe
             faciamus. Non minor, inquit, voluptas percipitur ex vilissimis rebus
-            quam ex pretiosissimis. dadwadsadsadwa fwadwsaewaedw adwsadewadewea dwawaew2qdesfda rrfewrefewrf3wa waewa3dswafrwaedwa waedwarewae.
+            quam ex pretiosissimis. dadwadsadsadwa fwadwsaewaedw adwsadewadewea
+            dwawaew2qdesfda rrfewrefewrf3wa waewa3dswafrwaedwa waedwarewae.
           </p>
         </div>
       </div>
 
       <div class="widget">
-        <div class="mr sdw-sf rad-5">
+        <div class="mr sh-sf rad-5">
           <div class="mr__top">
             <img
               src="https://via.placeholder.com/80"
@@ -123,36 +191,34 @@
           </div>
           <div class="mr__bot">
             <button class="patient-folder btn-1">
-              <i class="btn-1__icon fa fa-folder fa-2x"></i>
+              <i class="btn-1__icon fa fa-folder"></i>
               Patient Folder
             </button>
           </div>
         </div>
 
-        <div class="warning sdw-sf rad-5">
+        <div class="warning sh-sf rad-5">
           <div class="warning__btn tab">
             <button
               class="warning__btn tablink"
               onclick="openWarning(event,'General')"
               id="defaultOpen"
             >
-              <i class="icon fa fa-warning fa-2x" alt="General"></i>
+              <i class="icon fas fa-exclamation-triangle fa-2x"></i>
             </button>
 
             <button
               class="warning__btn tablink"
               onclick="openWarning(event,'Medication')"
-              id="defaultOpen"
             >
-              <i class="icon fa fa-warning fa-2x"></i>
+              <i class="icon med med-pills fa-2x"></i>
             </button>
 
             <button
               class="warning__btn tablink"
               onclick="openWarning(event,'Devices')"
-              id="defaultOpen"
             >
-              <i class="icon fa fa-warning fa-2x"></i>
+              <i class="icon med med-accessibility fa-2x"></i>
             </button>
           </div>
           <div class="warning__content">

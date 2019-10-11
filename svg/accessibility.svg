@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.115" height="19.961" viewBox="0 0 16.115 19.961">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+    </style>
+  </defs>
+  <g id="Accessibility" transform="translate(-47.38 0.001)">
+    <path id="Accessibility_31_" class="cls-1" d="M178.79,3.934a1.967,1.967,0,1,0-1.967-1.967A1.968,1.968,0,0,0,178.79,3.934Z" transform="translate(-124.191)"/>
+    <path id="Accessibility_30_" class="cls-1" d="M57.639,205.6a4.348,4.348,0,1,1-5.927-5.18V198.58a6.08,6.08,0,1,0,7.267,8.367l-.687-1.349Z" transform="translate(0 -190.523)"/>
+    <path id="Accessibility_29_" class="cls-1" d="M193.116,129.953l-2.635-5.18a1.153,1.153,0,0,0-1.029-.632h-3.375v-.77h2.9a.908.908,0,0,0,.866-.866.866.866,0,0,0-.866-.866h-2.9v-2.61a1.732,1.732,0,1,0-3.465,0v5.655a1.767,1.767,0,0,0,1.767,1.767h4.364L191.058,131a1.155,1.155,0,1,0,2.058-1.047Z" transform="translate(-129.746 -112.537)"/>
+  </g>
+</svg>

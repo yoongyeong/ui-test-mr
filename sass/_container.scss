@@ -1,0 +1,136 @@
+.sidebar {
+  background-color: $color-primary;
+  grid-column: sidebar-start/sidebar-end;
+  grid-row: 1/-1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.nav-btn {
+  border: none;
+
+  background-color: #fff;
+  height: 4px;
+  width: 4rem;
+  margin-top: 4rem;
+
+  &::before,
+  &::after {
+    background-color: #fff;
+    height: 4px;
+    width: 4rem;
+    content: "";
+    display: block;
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1rem);
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 0;
+    // margin-right: 3rem;
+    width: 3rem;
+    position: fixed;
+    right: 3rem;
+    &::before {
+      width: 3rem;
+      transform: translateY(-1.2rem);
+    }
+    &::after {
+      width: 3rem;
+      transform: translateY(1rem);
+    }
+  }
+}
+
+.header {
+  background-color: white;
+  padding: 1rem 0.8rem;
+  &--static {
+
+    .header-logo {
+      display: inline-block;
+
+      img {
+        object-fit: cover;
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+
+    .header-nav {
+      display: inline-flex;
+      float: right;
+      padding: 0.2rem 0;
+
+      .header-btn{
+        margin-right: 1.6rem;
+        height: 4rem;
+        background: none;
+        &:hover{
+          background-color: $color-grey-medium;
+        }
+
+        .icon-svg{
+          margin: .8rem .8rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          cursor: pointer;
+          fill: $color-grey-darker;
+        }
+      }
+
+      .btn-profile {
+        border-radius: 50%;
+        width: 3.2rem;
+        height: 3.2rem;
+        object-fit: cover;
+        cursor: pointer;
+        margin: .4rem .4rem;
+      }
+    }
+  }
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: [form-start] minmax(67.4rem, 1fr) [form-end widget-start] 27.2rem [widget-end];
+  gap: 0.8rem;
+  padding: 0.8rem;
+}
+
+.actions {
+  background-color: $color-grey-dark;
+}
+
+.sh-sf {
+  box-shadow: 0px 0.3rem 0.6rem rgba(0, 0, 0, 0.16);
+}
+.rad-5 {
+  border-radius: 0.5rem;
+}
+.rad-bot-5 {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.rad-bot-clear {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.rad-top-5 {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.pad-bot-8 {
+  padding-bottom: 0.8rem;
+}
+
+.pad-bot-clear {
+  padding-bottom: 0px;
+}

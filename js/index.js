@@ -1,42 +1,19 @@
-// var acc = document.getElementsByClassName("accordion");
-// var i;
-
-// for (i = 0; i < acc.length; i++) {
-//   acc[i].addEventListener("click", function() {
-//     this.classList.toggle("active-accordion");
-//     var panel = this.nextElementSibling;
-//     if (panel.style.maxHeight) {
-//       panel.style.maxHeight = null;
-//     } else {
-//       panel.style.maxHeight = panel.scrollHeight + "px";
-//     } 
-//   });
-// }
-
-
 // ACCORDION
-$(document).ready(function(){
+$(document).ready(function() {
   $(".accordion-container").slideUp();
-  $(".accordion-header").click(function(){
-    $(this).next(".accordion-container").slideToggle(200);
-    $(this).find(".icon").toggleClass("rotate");
+  $(".accordion-header").click(function() {
     $(this)
-  })
+      .next(".accordion-container")
+      .slideToggle(200)
+      .end()
+      .find(".icon")
+      .toggleClass("rotate")
+      .end()
+      .toggleClass("pad-bot-8", 100, "linear")
+      .toggleClass("rad-bot-5")
+      .end();
+  });
 });
-
-// $(document).ready(function($){
-//   var panels = $('.accordion-content').hide();
-//   panels.first().show();
-  
-//   $('.accordion-header').click(function() {
-//     var $this = $(this);
-//     panels.slideUp();
-//     $this.parent().next().slideDown();
-    
-//     return false;
-//   });
-// });
-
 
 // TABS
 function openWarning(evt, warningName) {
