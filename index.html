@@ -24,38 +24,66 @@
     <title>Medico &mdash; Patient's Name</title>
   </head>
 
-  <body class="container">
-    <div class="sidebar">
-      <button class="nav-btn"></button>
-    </div>
+  <body id="container" class="container">
+    <div id="overlay"></div>
 
-    <header class="header sh-sf">
-      <div class="header--static">
-        <a href="#" class="header-logo">
-          <img src="img/medico-logo-red-64.png" alt="Medico Logo" />
-        </a>
-        <div class="header-nav">
-          <a href="#" class="header-btn btn-message rad-5">
-            <svg class="icon-svg">
-              <use xlink:href="svg/solid.svg#envelope"></use>
-            </svg>
-          </a>
-          <a href="#" class="header-btn btn-notif rad-5">
-            <svg class="icon-svg">
-              <use xlink:href="svg/solid.svg#bell"></use>
-            </svg>
-          </a>
-          <img
-            src="img/default-photo-doctor.png"
-            alt="Doctor's Name"
-            class="btn btn-profile sh-sf"
-          />
+    <div id="sidebar" class="sidebar">
+      <!-- <i class="sidebar-logo med med-medico-logo fa-2x"></i> -->
+      <div class="sidebar-sticky">
+        <div id="nav-btn" class="nav-btn hamburger hamburger--arrow">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+        <div class="sidebar__icon">
+          <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
+          <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
+          <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
+          <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
+          <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
         </div>
       </div>
-      <div class="header--dynamic"></div>
+    </div>
+
+    <div id="sidebar__extension" class="sidebar__extension">
+      <div class="sidebar__extension--text">
+        <a href="#" class="link sidebar--link">Menu 1</a>
+        <a href="#" class="link sidebar--link">Menu 2</a>
+        <a href="#" class="link sidebar--link">Menu 3</a>
+        <a href="#" class="link sidebar--link">Menu 4</a>
+        <a href="#" class="link sidebar--link">Menu 5</a>
+      </div>
+    </div>
+
+    <header id="header" class="header sh-sf">
+      <div class="header-sticky">
+        <div class="header--static">
+          <a href="#" class="header-logo">
+            <img src="img/medico-logo-red-64.png" alt="Medico Logo" />
+          </a>
+          <div class="header-nav">
+            <a href="#" class="header-btn btn-message rad-5">
+              <svg class="icon-svg">
+                <use xlink:href="svg/solid.svg#envelope"></use>
+              </svg>
+            </a>
+            <a href="#" class="header-btn btn-notif rad-5">
+              <svg class="icon-svg">
+                <use xlink:href="svg/solid.svg#bell"></use>
+              </svg>
+            </a>
+            <img
+              src="img/default-photo-doctor.png"
+              alt="Doctor's Name"
+              class="btn btn-profile sh-sf"
+            />
+          </div>
+        </div>
+        <div class="header--dynamic"></div>
+      </div>
     </header>
 
-    <div class="workspace">
+    <div id="workspace" class="workspace">
       <div class="form">
         <button
           id="cppt"
@@ -257,7 +285,7 @@
       </div>
     </div>
 
-    <div class="actions">
+    <div id="actions" class="actions">
       <button class="actions__rujuk">Rujuk ke...</button>
       <button class="actions__konsul">Konsul ke...</button>
       <button class="actions__wip">WIP</button>

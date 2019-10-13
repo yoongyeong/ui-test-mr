@@ -3,56 +3,191 @@
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1/-1;
 
-  display: flex;
+  position: sticky;
+  top: 0;
+
+  z-index: 98;
   justify-content: center;
+
+  &-sticky{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
+  &-logo{
+    padding: 1.6rem .8rem;
+    color: white;
+  }
+
+
+
+  .nav-btn {
+    height: 6.4rem;
+  }
+
+  &__icon {
+    display: block;
+
+    text-align: center;
+    padding: 1.2rem 0;
+
+    .icon {
+      display: block;
+      height: 4rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  #sidebar__extension {
+    width: 2rem;
+  }
+
+  &__extension {
+    display: block;
+    width: 20rem;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    left: 6rem;
+
+    background-color: $color-primary;
+    z-index: 97;
+
+    &--text {
+      display: inline-block;
+      text-align: left;
+      padding: 1.2rem 0;
+      position: fixed;
+      top: 6.4rem;
+      overflow: hidden;
+
+      .link {
+        display: block;
+        color: white;
+        font-size: 1.6rem;
+        height: 4rem;
+      }
+    }
+  }
 }
 
-.nav-btn {
-  border: none;
+.hamburger--arrow.is-active {
+  .hamburger-inner {
+    &::before {
+      transform: translate3d($hamburger-layer-width * -0.2, 0, 0) rotate(-45deg)
+        scale(0.7, 1) translateY(0.2rem) translateX(-0.2rem);
+    }
 
-  background-color: #fff;
-  height: 4px;
-  width: 4rem;
-  margin-top: 4rem;
+    &::after {
+      transform: translate3d($hamburger-layer-width * -0.2, 0, 0) rotate(45deg)
+        scale(0.7, 1) translateY(-0.15rem) translateX(-0.2rem);
+    }
+  }
+}
+
+.hamburger {
+  padding: $hamburger-padding-y $hamburger-padding-x;
+  display: block;
+  cursor: pointer;
+
+  transition-property: opacity, filter;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+
+  // Normalize (<button>)
+  font: inherit;
+  color: white;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+
+  &:hover {
+    @if $hamburger-hover-use-filter == true {
+      filter: $hamburger-hover-filter;
+    } @else {
+      opacity: $hamburger-hover-opacity;
+    }
+  }
+
+  &.is-active {
+    &:hover {
+      @if $hamburger-hover-use-filter == true {
+        filter: $hamburger-active-hover-filter;
+      } @else {
+        opacity: $hamburger-active-hover-opacity;
+      }
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $hamburger-active-layer-color;
+    }
+  }
+}
+
+.hamburger-box {
+  width: $hamburger-layer-width;
+  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: $hamburger-layer-height / -2;
+
+  &,
+  &::before,
+  &::after {
+    width: $hamburger-layer-width;
+    height: $hamburger-layer-height;
+    background-color: $hamburger-layer-color;
+    border-radius: $hamburger-layer-border-radius;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+  }
 
   &::before,
   &::after {
-    background-color: #fff;
-    height: 4px;
-    width: 4rem;
     content: "";
     display: block;
   }
 
   &::before {
-    transform: translateY(-1.5rem);
-  }
-  &::after {
-    transform: translateY(1rem);
+    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
 
-  @media only screen and (max-width: $bp-large) {
-    margin-top: 0;
-    // margin-right: 3rem;
-    width: 3rem;
-    position: fixed;
-    right: 3rem;
-    &::before {
-      width: 3rem;
-      transform: translateY(-1.2rem);
-    }
-    &::after {
-      width: 3rem;
-      transform: translateY(1rem);
-    }
+  &::after {
+    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
   }
 }
 
 .header {
+  display: inline-block;
   background-color: white;
   padding: 1rem 0.8rem;
-  &--static {
+  z-index: 3;
 
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .header-sticky{
+    position: sticky;
+    top: 0;
+  }
+
+  &--static {
     .header-logo {
       display: inline-block;
 
@@ -68,16 +203,16 @@
       float: right;
       padding: 0.2rem 0;
 
-      .header-btn{
+      .header-btn {
         margin-right: 1.6rem;
         height: 4rem;
         background: none;
-        &:hover{
+        &:hover {
           background-color: $color-grey-medium;
         }
 
-        .icon-svg{
-          margin: .8rem .8rem;
+        .icon-svg {
+          margin: 0.8rem 0.8rem;
           width: 2.5rem;
           height: 2.5rem;
           cursor: pointer;
@@ -91,7 +226,7 @@
         height: 3.2rem;
         object-fit: cover;
         cursor: pointer;
-        margin: .4rem .4rem;
+        margin: 0.4rem 0.4rem;
       }
     }
   }
